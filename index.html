@@ -96,14 +96,10 @@ document.getElementById("guestForm").addEventListener("submit", function(e){
   })
   .then(res => res.text())
   .then(res => {
-    // Hide the form
-    form.style.display = "none";
-
-    // Show a thank you message
-    const container = document.querySelector(".container");
-    const thankYou = document.createElement("div");
-    thankYou.innerHTML = "<h2>Thank you for contacting us!</h2><p>Your details have been submitted successfully.</p>";
-    container.appendChild(thankYou);
+    // Show alert
+    alert("Form submitted successfully!");
+    // Reset the form for new entry
+    form.reset();
   })
   .catch(err => alert("Error submitting form. Please try again."));
 });
