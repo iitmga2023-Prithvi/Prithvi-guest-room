@@ -90,16 +90,14 @@ document.getElementById("guestForm").addEventListener("submit", function(e){
   const form = e.target;
   const data = new URLSearchParams(new FormData(form));
 
-  fetch("https://script.google.com/macros/s/AKfycbyUzBOFdfgrdMm9pqjqp24TM5wjebDyCugt3-58_MkOI__0vUSIkbbKX3ckodJTB10Z/exec", {
+  fetch("https://script.google.com/macros/s/AKfycbwa4ZUzdfJfnUXtYPkSBWjxFFT-Oi8arGZmuFOWlREYAN_Z_u73GCKX23o_iT_wl2Ztxg/exec", {
     method: "POST",
     body: data
   })
   .then(res => res.text())
   .then(res => {
-    // Show alert
-    alert("Form submitted successfully!");
-    // Reset the form for new entry
-    form.reset();
+    alert("Thank you for submitting! Your data has been recorded.");
+    form.reset(); // clears the form after submission
   })
   .catch(err => alert("Error submitting form. Please try again."));
 });
