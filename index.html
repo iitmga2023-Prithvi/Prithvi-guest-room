@@ -1,11 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Prithvi Guest Room Details</title>
+<meta charset="UTF-8">
+<title>Prithvi Guest Room Details</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+  body { font-family: Arial, sans-serif; background:#f2f2f2; padding:20px; }
+  .container { background:white; padding:25px; border-radius:10px; max-width:600px; margin:auto; }
+  input, select, textarea { width:100%; padding:10px; margin-top:6px; margin-bottom:14px; border-radius:5px; border:1px solid #ccc; }
+  button { background:#007bff; color:white; padding:12px; border:none; width:100%; font-size:16px; border-radius:5px; }
+  button:hover { background:#0056b3; cursor:pointer; }
+  h2 { text-align:center; }
+</style>
 </head>
 <body>
-  <h1>Hello Prithvi Guest Room Website</h1>
-  <p>This site is under construction. Please wait for the full form.</p>
+
+<div class="container">
+<h2>Prithvi Guest Room Details</h2>
+
+<form>
+
+  <label>Guest Name:</label>
+  <input type="text" required>
+
+  <label>Gender:</label>
+  <select required>
+    <option value="">Select Gender</option>
+    <option>Male</option>
+    <option>Female</option>
+    <option>Other</option>
+  </select>
+
+  <label>Age:</label>
+  <input type="number" min="1" max="120" required>
+
+  <label>Designation / Category:</label>
+  <input type="text">
+
+  <label>Institute / Organisation:</label>
+  <input type="text">
+
+  <label>Mobile Number:</label>
+  <input type="tel" required>
+
+  <label>Email ID:</label>
+  <input type="email">
+
+  <label>ID Proof Type:</label>
+  <select required>
+    <option value="">Select ID Proof</option>
+    <option>Aadhaar Card</option>
+    <option>PAN Card</option>
+    <option>Driving License</option>
+    <option>Passport</option>
+    <option>Institution ID</option>
+  </select>
+
+  <label>ID Proof Number:</label>
+  <input type="text" required>
+
+  <label>Purpose of Visit:</label>
+  <textarea rows="2"></textarea>
+
+  <label>Check-in Date:</label>
+  <input type="date" required>
+
+  <label>Check-out Date:</label>
+  <input type="date" required>
+
+  <label>Room Type:</label>
+  <select required>
+    <option value="">Select Room Type</option>
+    <option>Single Common</option>
+    <option>Non AC</option>
+    <option>AC</option>
+    <option>Double AC VIP</option>
+    <option>Double AC Suite</option>
+  </select>
+
+  <button type="submit">Submit</button>
+
+</form>
+</div>
+
 </body>
 </html>
