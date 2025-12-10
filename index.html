@@ -95,7 +95,16 @@ document.getElementById("guestForm").addEventListener("submit", function(e){
     body: data
   })
   .then(res => res.text())
-  .then(res => alert("Form submitted successfully!"))
+  .then(res => {
+    // Hide the form
+    form.style.display = "none";
+
+    // Show a thank you message
+    const container = document.querySelector(".container");
+    const thankYou = document.createElement("div");
+    thankYou.innerHTML = "<h2>Thank you for contacting us!</h2><p>Your details have been submitted successfully.</p>";
+    container.appendChild(thankYou);
+  })
   .catch(err => alert("Error submitting form. Please try again."));
 });
 </script>
