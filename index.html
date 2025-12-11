@@ -90,7 +90,7 @@ document.getElementById("guestForm").addEventListener("submit", function(e){
   const form = e.target;
   const data = new URLSearchParams(new FormData(form));
 
-  fetch("https://script.google.com/macros/s/AKfycbwa4ZUzdfJfnUXtYPkSBWjxFFT-Oi8arGZmuFOWlREYAN_Z_u73GCKX23o_iT_wl2Ztxg/exec", {
+  fetch("https://script.google.com/macros/s/AKfycbz133gfJxR4T4im9dQ7JIQmvbym15d7SPi2vKMzKUeBjpcccit3d6DSp1K0z1g2BkrA/exec", {
     method: "POST",
     body: data
   })
