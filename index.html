@@ -25,7 +25,7 @@
   .logo {
     display: block;
     margin: 0 auto 15px auto;
-    width: 120px;  /* Bigger Logo */
+    width: 120px;
   }
 
   input, select, textarea {
@@ -85,4 +85,52 @@
     <label>Age:</label>
     <input type="number" name="age" min="1" max="120" required>
 
-    <label>Designation / Category:</la
+    <label>Designation / Category:</label>
+    <input type="text" name="designation">
+
+    <label>Institute / Organisation:</label>
+    <input type="text" name="institute">
+
+    <label>Address:</label>
+    <textarea name="address" rows="2"></textarea>
+
+    <label>Mobile Number:</label>
+    <input type="tel" name="mobile" required>
+
+    <label>Email ID:</label>
+    <input type="email" name="email">
+
+    <label>ID Proof Type:</label>
+    <select name="idProofType" required>
+      <option value="">Select ID Proof</option>
+      <option>Aadhaar Card</option>
+      <option>PAN Card</option>
+      <option>Driving License</option>
+      <option>Passport</option>
+      <option>Institution ID</option>
+    </select>
+
+    <label>ID Proof Number:</label>
+    <input type="text" name="idProofNumber" required>
+
+    <label>Purpose of Visit:</label>
+    <textarea rows="2" name="purpose"></textarea>
+
+    <label>Check-in Date:</label>
+    <input type="date" name="checkIn" required>
+
+    <label>Check-out Date:</label>
+    <input type="date" name="checkOut" required>
+
+    <label>Room Type:</label>
+    <select name="roomType" required>
+      <option value="">Select Room Type</option>
+      <option>Single Non AC Common</option>
+      <option>Single Non AC with attached washroom</option>
+      <option>Single AC with attached washroom</option>
+      <option>Double AC VIP</option>
+      <option>Double AC Suit</option>
+    </select>
+
+    <label>Remarks:</label>
+    <textarea
