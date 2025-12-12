@@ -1,68 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 <meta charset="UTF-8">
-<title>Prithvi Guest House – Guest Room Form</title>
+<title>Prithvi Guest House – Guest Room Details</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <style>
   body {
     font-family: Arial, sans-serif;
-    background: #eef2f3;
-    margin: 0;
-    padding: 0;
+    background:#f2f2f2;
+    padding:20px;
   }
 
   .container {
-    background: white;
-    width: 90%;
-    max-width: 700px;
-    margin: 30px auto;
-    padding: 25px;
-    border-radius: 12px;
-    box-shadow: 0 0 15px #9993;
+    background:white;
+    padding:25px;
+    border-radius:10px;
+    max-width:650px;
+    margin:auto;
+    box-shadow: 0 0 12px #ccc;
   }
 
-  .logo-container {
-    text-align: center;
-    margin-bottom: 10px;
-  }
-
-  .logo-container img {
-    width: 120px;
-  }
-
-  h2 {
-    text-align: center;
-    margin-top: 5px;
-  }
-
-  label {
-    font-weight: bold;
+  .logo {
+    display: block;
+    margin: 0 auto 15px auto;
+    width: 120px;  /* Bigger Logo */
   }
 
   input, select, textarea {
-    width: 100%;
-    padding: 10px;
-    margin-top: 6px;
-    margin-bottom: 14px;
-    border-radius: 6px;
-    border: 1px solid #aaa;
+    width:100%;
+    padding:10px;
+    margin-top:6px;
+    margin-bottom:14px;
+    border-radius:5px;
+    border:1px solid #bbb;
+    font-size:15px;
   }
 
   button {
-    background: #0066cc;
-    color: white;
-    padding: 12px;
-    border: none;
-    width: 100%;
-    font-size: 18px;
-    border-radius: 6px;
+    background:#0066cc;
+    color:white;
+    padding:12px;
+    border:none;
+    width:100%;
+    font-size:18px;
+    border-radius:5px;
   }
 
   button:hover {
-    background: #004d99;
-    cursor: pointer;
+    background:#004d99;
+    cursor:pointer;
+  }
+
+  h2 {
+    text-align:center;
+    margin-top:5px;
   }
 </style>
 </head>
@@ -71,11 +64,10 @@
 
 <div class="container">
 
-  <div class="logo-container">
-    <img src="https://www.tropmet.res.in/images/logo.png" alt="IITM Logo">
-  </div>
+  <!-- IITM Logo -->
+  <img src="IITM_Logo.png" class="logo">
 
-  <h2>Prithvi Guest House – Room Booking Form</h2>
+  <h2>Prithvi Guest House – Guest Room Details</h2>
 
   <form id="guestForm">
 
@@ -93,80 +85,4 @@
     <label>Age:</label>
     <input type="number" name="age" min="1" max="120" required>
 
-    <label>Address:</label>
-    <textarea name="address" rows="2" required></textarea>
-
-    <label>Designation / Category:</label>
-    <input type="text" name="designation">
-
-    <label>Institute / Organisation:</label>
-    <input type="text" name="institute">
-
-    <label>Mobile Number:</label>
-    <input type="tel" name="mobile" required>
-
-    <label>Email ID:</label>
-    <input type="email" name="email">
-
-    <label>ID Proof Type:</label>
-    <select name="idProofType" required>
-      <option value="">Select ID Proof</option>
-      <option>Aadhaar Card</option>
-      <option>PAN Card</option>
-      <option>Driving License</option>
-      <option>Passport</option>
-      <option>Institution ID</option>
-    </select>
-
-    <label>ID Proof Number:</label>
-    <input type="text" name="idProofNumber" required>
-
-    <label>Purpose of Visit:</label>
-    <textarea rows="2" name="purpose"></textarea>
-
-    <label>Check-in Date:</label>
-    <input type="date" name="checkIn" required>
-
-    <label>Check-out Date:</label>
-    <input type="date" name="checkOut" required>
-
-    <label>Room Type:</label>
-    <select name="roomType" required>
-      <option value="">Select Room Type</option>
-      <option>Single Non AC Common</option>
-      <option>Single Non AC with attached washroom</option>
-      <option>Single AC with attached washroom</option>
-      <option>Double AC VIP</option>
-      <option>Double AC Suit</option>
-    </select>
-
-    <label>Remarks:</label>
-    <textarea name="remarks" rows="2"></textarea>
-
-    <button type="submit">Submit</button>
-
-  </form>
-
-</div>
-
-<script>
-document.getElementById("guestForm").addEventListener("submit", function(e){
-  e.preventDefault();
-
-  const form = e.target;
-  const data = new URLSearchParams(new FormData(form));
-
-  fetch("https://script.google.com/macros/s/AKfycbz133gfJxR4T4im9dQ7JIQmvbym15d7SPi2vKMzKUeBjpcccit3d6DSp1K0z1g2BkrA/exec", {
-    method: "POST",
-    body: data
-  })
-  .then(res => res.text())
-  .then(res => {
-    window.location.href = "success.html";
-  })
-  .catch(err => alert("Error submitting form."));
-});
-</script>
-
-</body>
-</html>
+    <label>Designation / Category:</la
