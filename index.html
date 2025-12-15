@@ -18,8 +18,8 @@ h2 { text-align:center; margin-top:5px; }
 <body>
 
 <div class="container">
-  <!-- IITM Logo -->
-  <img src="https://iitm.res.in/themes/custom/iitm/images/iitm-logo.png" class="logo" alt="IITM Logo">
+  <!-- Local IITM Logo -->
+  <img src="IITM_Logo.png" class="logo" alt="IITM Logo">
 
   <h2>Prithvi Guest House – Guest Room Details</h2>
 
@@ -116,14 +116,20 @@ form.addEventListener("submit", function(e) {
 
   const webAppURL = "https://script.google.com/macros/s/AKfycbNkFbhaxfenSYr2P5ZlPa8UXydXl5K62uPQcS2oHj9fhCPLxLXpjwYYhvzlv_xVMfO/exec";
 
-  fetch(webAppURL, {https://script.google.com/macros/s/AKfycbyZCJINMCmMZ5d4M6hKa_n3idT4TyQHIwJv3v_NkxdDWYPjt27AsjDwGM1DlHlUvlQF/exec
+  fetch(webAppURL, {
     method: "POST",
     headers: {"Content-Type":"application/json"},
     body: JSON.stringify(formData)
   })
   .then(response => response.text())
-  .then(result => { alert("Form submitted successfully!"); form.reset(); })
-  .catch(error => { console.error(error); alert("Submission failed. Please try again."); });
+  .then(result => { 
+      alert("Form submitted successfully!"); 
+      form.reset(); 
+  })
+  .catch(error => { 
+      console.error(error); 
+      alert("Submission failed. Please try again."); 
+  });
 });
 </script>
 
